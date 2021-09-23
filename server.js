@@ -38,7 +38,7 @@ MongoClient.connect(uri, (err, database) => {
 
 // serve the homepage
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
+  res.send('Servidor Activo');
 });
 
 // add a document to the DB collection recording the click event
