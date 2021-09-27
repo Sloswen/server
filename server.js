@@ -7,20 +7,6 @@ const MongoClient = require('mongodb').MongoClient;
 const port = 81; // port to listen on
 
 const app = express();
-app.use(require("cors")()); // allow Cross-domain requests
-//app.use(require("body-parser").json()); // automatically parses request data to JSON. Aparentemente no es necesario ya usar express.json()
-app.use(express.json());
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
-    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
-    res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
-    next();
-});
-
-
-
-
 // serve files from the public directory
 app.use(express.static('public'));
 
