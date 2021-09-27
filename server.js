@@ -2,6 +2,7 @@ console.log('Server-side code running');
 
 const express = require('express');
 const MongoClient = require('mongodb').MongoClient;
+const cors = require('cors');
 
 //require('dotenv').config()
 const port = 81; // port to listen on
